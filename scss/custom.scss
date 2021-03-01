@@ -1,0 +1,15 @@
+@import "bootstrap/scss/bootstrap";
+
+
+@font-face {
+	font-family: "copperplate";
+	src: url("font/copperplate.ttf");
+}
+
+body {
+	font-family: 'copperplate';
+}
+
+$theme-colors: (
+  "primary": #000000,
+);

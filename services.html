@@ -10,28 +10,47 @@
 
     <title>Angel Recordz</title>
 	  <link rel="icon" type="image/png" href="icon.png">
+		<style>
+			@font-face {
+				font-family: "copperplate";
+				src: url("font/copperplate.ttf");
+			}
+
+			body {
+				font-family: 'copperplate';
+				text-align: center;
+			}
+			.main {
+				margin: 1.5%;
+			}
+			li {
+				list-style-type: none;
+			}
+			h3 {
+				color: #0099cc;
+			}
+		</style>
   </head>
   <body style="background-color: #000000;">
-			<a href="index.html"><img src="AR%20Banner.png" width="722px" height="100px"/></a>
+			<a href="index.html"><img src="banner.png" width="500px" height="112px"/></a>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
       	<div class="navbar-nav">
           <a class="nav-item nav-link" href="index.html">Home</a>
 					<a class="nav-item nav-link active" href="services.html">Services</a>
           <a class="nav-item nav-link" href="bio.html">Bio</a>
 					<a class="nav-item nav-link" href="studio.html">Studio</a>
+					<a class="nav-item nav-link" href="equipment.html">Equipment</a>
 					<a class="nav-item nav-link" href="contact.html">Contact</a>
+					<a class="nav-item nav-link" href="music.html">Music</a>
         </div>
       </div>
     </nav>
-
-		<h2>Music Production</h2>
-		<p>$500/song plus 3% of record sales</p>
-		<h2>Recording Sessions</h2>
-		<ul>
+		<div class="main">
+		<h3>Music Production</h3>
+		<p class="text-light">$500/song plus 3% of record sales</p>
+		<h3>Recording Sessions</h3>
+		<ul class="text-light">
 			<li>Tracking: $25/hr</li>
 			<!-- add tooltip to explain each one? -->
 			<li>Editing: $25/hr</li>
@@ -39,25 +58,25 @@
 			<li>Mastering: $50/song</li>
 		</ul>
 
-		<h2>Music Education</h2>
-		<ul>
+		<h3>Music Education</h3>
+		<ul class="text-light">
 			<li>Guitar Lessons: $20/hour</li>
 			<!-- add tooltip to explain each one? -->
 			<li>Piano Lessons: $20/hourr</li>
 			<li>Bass Lessons: $20/hour</li>
 			<li>Piano Lessons: $20/hour</li>
 			<li>Music Composition Lessons: $25/hour</li>
-			<ul>
-				<h4>Equipment Training</h4>
-				<li>PA Equipment, Usage and Care – $20/hour</li>
-				<li>Running Live and Stage Mixes – $20/hour</li>
-				<li>Proper Gear Handling and Equipment Care – $20/hour</li>
-				<li>Sound Engineering – $25/hour</li>
-			</ul>
+		</ul>
+		<h3>Equipment Training</h3>
+		<ul class="text-light">
+			<li>PA Equipment, Usage and Care – $20/hour</li>
+			<li>Running Live and Stage Mixes – $20/hour</li>
+			<li>Proper Gear Handling and Equipment Care – $20/hour</li>
+			<li>Sound Engineering – $25/hour</li>
 		</ul>
 
-		<h2>Practice Sessions</h2>
-		<ul>
+		<h3>Practice Sessions</h3>
+		<ul class="text-light">
 			<li>$20/hour</li>
 			<!-- add tooltip to explain each one? -->
 			<li>PA and Mics included</li>
@@ -66,18 +85,18 @@
 			<li>Personalized Monitor Mixes $25 initial fee – free adjustments</li>
 		</ul>
 
-		<h2>Referral Rewards</h2>
-		<p>1 Free Service of any kind per referral</p>
+		<h3>Referral Rewards</h3>
+		<p class="text-light">1 Free Service of any kind per referral</p>
 
-		<h4>We accept any of the following forms of payment:</h4>
-		<ul>
-			<li>visa</li>
-			<!-- add pictures of credit card -->
-			<li>mastercard</li>
-			<li>etc.</li>
-			<li>Venmo, Paypal</li>
+		<h5 class="text-light">We accept any of the following forms of payment:</h5>
+		<ul class="text-light">
+			<li>Visa</li>
+			<li>Mastercard</li>
+			<li>Discover</li>
+			<li>Venmo</li>
+			<li>Paypal</li>
 		</ul>
-
+		</div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
