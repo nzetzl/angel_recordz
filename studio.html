@@ -39,6 +39,73 @@
 				max-width: 100%;
 				max-height: 112px;
 			}
+			/* Style the Image Used to Trigger the Modal */
+			.images {
+				border-radius: 5px;
+				cursor: pointer;
+				transition: 0.3s;
+			}
+			.images:hover {opacity: 0.7;}
+
+			/* The Modal (background) */
+			.modal {
+				display: none; /* Hidden by default */
+				position: fixed; /* Stay in place */
+				z-index: 1; /* Sit on top */
+				padding-top: 5%; /* Location of the box */
+				left: 0;
+				top: 0;
+				width: 100%; /* Full width */
+				height: 100%; /* Full height */
+				overflow: auto; /* Enable scroll if needed */
+				background-color: rgb(0,0,0); /* Fallback color */
+				background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+			}
+
+			/* Modal Content (Image) */
+			.modal-content {
+				margin: auto;
+				display: block;
+				width: auto;
+				height: auto;
+				max-width: 95%;
+				max-height: 95%;
+			}
+			/* Add Animation - Zoom in the Modal */
+			.modal-content, #caption {
+				animation-name: zoom;
+				animation-duration: 0.6s;
+			}
+
+			@keyframes zoom {
+				from {transform:scale(0)}
+				to {transform:scale(1)}
+			}
+
+			/* The Close Button */
+			.close {
+				position: absolute;
+				top: 15px;
+				right: 35px;
+				color: #f1f1f1;
+				font-size: 40px;
+				font-weight: bold;
+				transition: 0.3s;
+			}
+
+			.close:hover,
+			.close:focus {
+				color: #bbb;
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+			/* 100% Image Width on Smaller Screens */
+			@media only screen and (max-width: 700px){
+				.modal-content {
+					width: 100%;
+				}
+			}
 		</style>
   </head>
   <body style="background-color: #000000;">
@@ -58,26 +125,52 @@
 		<div class="main">
 			<h3>Studio</h3>
 			<div>
-				<img src="equipment15.jpeg" class="img-responsive" width="200px" />
-				<img src="equipment2.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment3.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment4.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment7.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment6.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment5.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment8.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment9.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment12.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment13.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment10.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment11.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment14.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment17.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment16.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment1.jpeg" width="200px" class="img-responsive gallery" />
-				<img src="equipment18.jpeg" width="200px" class="img-responsive gallery" />
+				<img src="equipment15.jpeg" class="img-responsive images" width="200px" />
+				<img src="equipment2.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment3.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment4.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment7.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment6.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment5.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment8.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment9.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment12.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment13.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment10.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment11.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment14.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment17.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment16.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment1.jpeg" width="200px" class="img-responsive gallery images" />
+				<img src="equipment18.jpeg" width="200px" class="img-responsive gallery images" />
 			</div>
 		</div>
+		<div id="myModal" class="modal">
+  		<span class="close">&times;</span>
+  		<img class="modal-content" id="img01">
+		</div>
+		<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+			// Get the image and insert it inside the modal
+			var imgs = document.getElementsByClassName('images');
+			console.log(imgs);
+			var modalImg = document.getElementById("img01");
+			for (let item of imgs) {
+    		item.onclick = function() {
+					modal.style.display = "block";
+					modalImg.src = this.src;
+				}
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+		</script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
